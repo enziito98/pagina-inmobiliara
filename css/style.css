@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --color_header: rgb(200, 200, 200);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+
+}
+
+.link {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color_header);
+    padding: 10px;
+    transition: all 0.2s ease;
+}
+
+.link:hover{
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+    
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url("../images/hero.jpg");
+    background-size: cover;
+    z-index: -1;
+    clip-path: polygon(100% 0, 100% 80%, 50% 95%, 0 80%, 0 0);
+
+}
+
+.hero-container {
+    max-width: 800px;
+    padding: 0;
+    display: grid;
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap: 1rem;
+    padding-bottom: 100px;
+    text-align: center;
+    color: var(--color_header);
+}
+
+.logo-title {
+    color: #fff;
+}
+
+.hero-title {
+    font-size: 3rem;
+}
+
+.div-container {
+    padding: 20px 0;
+}
+
+.footer {
+    background-color: var(--color_header);
+    font-size: 20px;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
